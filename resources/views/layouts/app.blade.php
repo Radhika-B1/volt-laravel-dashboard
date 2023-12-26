@@ -1,3 +1,5 @@
+@include('layouts.newapp');
+
 <x-layouts.base>
 
 

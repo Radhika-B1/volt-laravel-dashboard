@@ -42,7 +42,7 @@
         </span>
     </div>
 </div>
-<footer class="bg-white rounded shadow p-5 mb-4 mt-4">
+{{-- <footer class="bg-white rounded shadow p-5 mb-4 mt-4">
     <div class="row">
         <div class="col-12 col-md-4 col-xl-6 mb-4 mb-md-0">
             <p class="mb-0 text-center text-lg-start">© 2019-<span class="current-year"></span> <a
@@ -67,4 +67,30 @@
             </ul>
         </div>
     </div>
+</footer> --}}
+
+<footer class="footer-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Sweetwedding</a> Design By : <a href="https://html.design/">html design</a></p>
+            </div>
+        </div>
+    </div>
 </footer>
+<!-- End Footer -->
+
+<!-- ALL JS FILES -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- ALL PLUGINS -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.pogo-slider.min.js"></script> 
+<script src="js/slider-index.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/timeLine.min.js"></script>	
+<script src="js/form-validator.min.js"></script>
+<script src="js/contact-form-script.js"></script>
+<script src="js/custom.js"></script>

@@ -99,6 +99,24 @@
     <!-- Volt JS -->
     <script src="/assets/js/volt.js"></script>
 
+
+
+    {{--Start Zion --}}
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pogo-slider.min.css">
+    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    {{-- End Zion --}}
+
+
+
+
     @if(env('IS_DEMO')) 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141734189-6"></script>
@@ -136,3 +154,56 @@
 </body>
 
 </html>
+
+<style>
+	.logo_image{
+		height: 60px !important;
+	}
+	
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var items = document.querySelectorAll('.item');
+
+        items.forEach(function (item, index) {
+            var currentDate = new Date();
+            currentDate.setDate(currentDate.getDate() + index);
+
+            var day = currentDate.toLocaleString('default', { weekday: 'long' });
+            var date = currentDate.toLocaleString('default', { day: 'numeric' });
+            var month = currentDate.toLocaleString('default', { month: 'short' });
+            var year = currentDate.getFullYear();
+
+            var dateElement = item.querySelector('.star');
+            dateElement.innerHTML = '<span class="h3">' + date + '</span><span>' + month + '</span><span>' + year + '</span>';
+
+            var dayElement = item.querySelector('#day' + (index + 1));
+            dayElement.textContent = day;
+
+            var activityElement = item.querySelector('.textContent .lead');
+            activityElement.textContent = getDayActivity(day);
+        });
+
+        function getDayActivity(day) {
+            switch (day.toLowerCase()) {
+                case 'monday':
+                    return 'Chain Prayer (Timings: 7:30 PM to 8:30 PM)';
+                case 'tuesday':
+                    return "Women's Ministry (Timings: 7:30 PM to 8:30 PM)";
+                case 'wednesday':
+                    return 'Church Prayer (Timings: 7:30 PM to 8:30 PM)';
+                case 'thursday':
+                    return 'Bible Study (Timings: 7:30 PM to 8:30 PM)';
+                case 'friday':
+                    return 'Gospel Retreat (Timings: 7:30 PM to 8:30 PM)';
+                case 'saturday':
+					return 'Fasting Prayers (Timings: 10:00 AM to 1:00 PM)';
+                case 'sunday':
+                    return 'Sunday Worship (Timings: 10:30 AM to 1:3s0 PM)';
+                default:
+					// if(date == 1 )
+                    return 'Regular Activity';
+            }
+        }
+    });
+</script>
